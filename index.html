@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación web para la gestión y seguimiento de gastos personales.">
+    <title>Gestor de Gastos Personales</title>
+    
+    <!-- Vinculación de la hoja de estilos principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado principal de la aplicación -->
+    <header class="app-header">
+        <h1>Gestor de Gastos</h1>
+        <p class="subtitle">Control y seguimiento de finanzas personales</p>
+    </header>
+
+    <!-- Contenedor principal del contenido -->
+    <main class="app-main">
+        
+        <!-- Sección 1: Formulario de registro de gastos -->
+        <section class="expense-form-section">
+            <h2>Registrar Nuevo Gasto</h2>
+            <form id="expense-form" class="expense-form">
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" name="descripcion" placeholder="Ej: Almuerzo, Transporte, Suscripción" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="monto">Monto:</label>
+                    <input type="number" id="monto" name="monto" placeholder="0.00" step="0.01" min="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="" disabled selected>Seleccione una categoría</option>
+                        <option value="comida">Comida y Bebida</option>
+                        <option value="transporte">Transporte</option>
+                        <option value="ocio">Ocio y Entretenimiento</option>
+                        <option value="servicios">Servicios Públicos</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Agregar Gasto</button>
+            </form>
+        </section>
+
+        <!-- Sección 2: Resumen y listado de gastos -->
+        <section class="expense-list-section">
+            <h2>Historial de Gastos</h2>
+            
+            <!-- Contenedor de métricas resumidas -->
+            <div class="summary-container">
+                <p class="summary-text">Total Gastado: <span id="total-amount" class="highlight">$0.00</span></p>
+            </div>
+
+            <!-- Lista dinámica donde se renderizarán los registros mediante JavaScript -->
+            <ul id="expense-list" class="expense-list">
+                <!-- Los elementos <li> se inyectarán dinámicamente desde app.js -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Pie de página de la aplicación -->
+    <footer class="app-footer">
+        <p>&copy; 2026 Gestor de Gastos. Desarrollado por Dieguitsu.</p>
+    </footer>
+
+    <!-- Carga del script principal con la lógica de negocio (defer optimiza la carga) -->
+    <script src="app.js" defer></script>
+</body>
+</html>
