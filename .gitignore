@@ -1,0 +1,15 @@
+# Archivos de sistema
+Thumbs.db
+.DS_Store
+
+# Entornos virtuales de Python (para la Fase 3)
+venv/
+__pycache__/
+*.pyc
+
+# Node modules (para la Fase 3 con React)
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
