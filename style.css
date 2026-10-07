@@ -1,0 +1,187 @@
+/* =========================================
+   Variables Globales y Reset
+   ========================================= */
+:root {
+    --primary-color: #2563eb; /* Azul corporativo */
+    --primary-hover: #1d4ed8;
+    --bg-color: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --border-color: #e5e7eb;
+    --success-color: #10b981;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* =========================================
+   Encabezado
+   ========================================= */
+.app-header {
+    background-color: var(--card-bg);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.app-header h1 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.app-header .subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   Contenedor Principal
+   ========================================= */
+.app-main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* =========================================
+   Secciones (Tarjetas)
+   ========================================= */
+.expense-form-section, 
+.expense-list-section {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* =========================================
+   Formulario
+   ========================================= */
+.expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.form-group input, 
+.form-group select {
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================================
+   Botones
+   ========================================= */
+.btn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* =========================================
+   Resumen y Lista
+   ========================================= */
+.summary-container {
+    background-color: #f8fafc;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.summary-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.highlight {
+    color: var(--success-color);
+    font-size: 1.3rem;
+}
+
+.expense-list {
+    list-style: none;
+}
+
+.expense-list li {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expense-list li:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   Pie de página
+   ========================================= */
+.app-footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 2rem;
+}
